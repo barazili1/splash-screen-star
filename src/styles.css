@@ -1020,7 +1020,7 @@
 .pin {
   min-height: 100dvh;
   background: oklch(1 0 0);
-  color: oklch(0.15 0 0);
+  color: oklch(0.09 0 0);
   font-family: var(--font-arabic);
   display: flex;
   flex-direction: column;
@@ -1031,31 +1031,33 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row-reverse;
-  padding: 10px 16px;
+  height: 43px;
+  padding: 0 6px 0 28px;
   border-bottom: 1px solid oklch(0.92 0 0);
 }
 
 .pin-ipn {
-  width: 42px;
+  width: 37px;
   height: auto;
 }
 
 .pin-bank {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   padding: 0;
   border: 0;
   background: none;
   color: inherit;
-  font: 700 21px/1.2 var(--font-arabic);
+  font: 700 19px/1.2 var(--font-arabic);
   cursor: pointer;
 }
 
 .pin-bank svg {
-  width: 20px;
-  height: 20px;
-  color: oklch(0.35 0 0);
+  width: 19px;
+  height: 19px;
+  stroke-width: 2.2;
+  color: oklch(0.2 0 0);
 }
 
 .pin-account {
@@ -1063,30 +1065,32 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 10px 16px 12px 44px;
+  min-height: 49px;
+  padding: 7px 6px 7px 40px;
   border-bottom: 1px solid oklch(0.92 0 0);
 }
 
 .pin-account-side {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   text-align: right;
-  gap: 1px;
+  gap: 0;
+  line-height: 1.15;
 }
 
 .pin-account-side small {
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 11.5px;
+  font-weight: 700;
 }
 
 .pin-account-side strong {
-  font-size: 16px;
+  font-size: 13.5px;
   font-weight: 800;
 }
 
 .pin-account-side span {
-  font-size: 11px;
+  font-size: 9.5px;
   font-weight: 800;
 }
 
@@ -1094,32 +1098,33 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1px;
-  margin-inline-start: 26px;
+  gap: 0;
+  line-height: 1.15;
+  margin-inline-start: 24px;
 }
 
 .pin-account-total small {
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 700;
 }
 
 .pin-account-total strong {
-  font-size: 17px;
+  font-size: 14.5px;
   font-weight: 800;
 }
 
 .pin-account-chevron {
   position: absolute;
-  inset-inline-end: 12px;
+  inset-inline-end: 10px;
   top: 50%;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   transform: translateY(-50%);
   color: oklch(0.55 0.02 260);
 }
 
 .pin-body {
-  padding: 28px 16px 0;
+  padding: 32px 45px 0;
 }
 
 .pin-label {
@@ -1127,26 +1132,24 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row-reverse;
-  padding: 0 2px;
 }
 
 .pin-label h1 {
-  font-size: 17px;
+  font-size: 15.5px;
   font-weight: 800;
 }
 
 .pin-label svg {
-  width: 22px;
-  height: 22px;
-  color: oklch(0.45 0 0);
+  width: 19px;
+  height: 19px;
+  color: oklch(0.35 0 0);
 }
 
 .pin-boxes {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 10px;
-  margin-top: 16px;
-  direction: ltr;
+  gap: 11px;
+  margin-top: 12px;
 }
 
 .pin-box {
@@ -1154,45 +1157,45 @@
   align-items: center;
   justify-content: center;
   height: 42px;
-  border: 1px solid oklch(0.87 0 0);
-  border-radius: 9px;
+  border: 1px solid oklch(0.85 0 0);
+  border-radius: 8px;
   background: oklch(0.985 0 0);
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1;
 }
 
 .pin-box.active {
-  border: 2px solid oklch(0.2 0 0);
-  background: oklch(1 0 0);
+  border: 2px solid oklch(0.15 0 0);
+  background: oklch(0.99 0 0);
 }
 
 .pin-fees {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 18px;
-  padding: 0 2px;
-  font-size: 16px;
-  color: oklch(0.2 0 0);
+  margin: 26px -15px 0;
+  font-size: 15px;
+  color: oklch(0.12 0 0);
 }
 
 .pin-keypad {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: center;
   margin-top: auto;
-  padding: 10px 6px 18px;
+  padding-bottom: 0;
 }
 
 .pin-key {
-  padding: 26px 0;
+  height: 94px;
+  padding: 0;
   border: 0;
   background: none;
-  color: oklch(0.1 0 0);
-  font: 800 27px/1 var(--font-arabic);
+  color: oklch(0.06 0 0);
+  font: 800 26px/1 var(--font-arabic);
   cursor: pointer;
 }
 
 .pin-key.enter {
-  font-size: 24px;
+  font-size: 23px;
+  letter-spacing: 0.01em;
 }
