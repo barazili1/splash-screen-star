@@ -1,11 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import {
   ArrowDownLeft,
   ArrowUpRight,
   ArrowUpLeft,
   ArrowDownRight,
   Smartphone,
+  X,
 } from "lucide-react";
+import qrCode from "@/assets/qr-code.png.asset.json";
+import btnQr from "@/assets/btn-qr.png.asset.json";
+import btnShare from "@/assets/btn-share.png.asset.json";
 import homeHeader from "@/assets/home-header.jpeg";
 import bankLogo from "@/assets/bank-reference.png.asset.json";
 import ipnLogo from "@/assets/ipn-logo.png";
