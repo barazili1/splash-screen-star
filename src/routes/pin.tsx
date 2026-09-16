@@ -69,7 +69,7 @@ function PinPage() {
           <Eye strokeWidth={1.8} />
         </div>
 
-        <div className="pin-boxes">
+        <div className="pin-boxes" dir="rtl">
           {Array.from({ length: 6 }).map((_, i) => (
             <div
               key={i}
