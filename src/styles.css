@@ -172,7 +172,7 @@
 }
 
 .progress-mark {
-  width: 85px;
+  width: 90px;
   height: auto;
 }
 
@@ -834,5 +834,89 @@
     width: 1.42rem;
     height: 1.42rem;
   }
+
+  /* Transactions section — more compact */
+  .home > .home-section:nth-of-type(3) {
+    padding-top: 0.95rem;
+  }
+
+  .tx-row {
+    padding: 0.62rem 0;
+  }
+
+  .tx-head strong {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .tx-badge {
+    padding: 0.1rem 0.55rem;
+    font-size: 0.72rem;
+  }
+
+  .tx-chevron {
+    font-size: 1.1rem;
+  }
+
+  .tx-body {
+    gap: 0.55rem;
+    margin-top: 0.32rem;
+  }
+
+  .tx-avatar {
+    width: 3.6rem;
+  }
+
+  .tx-avatar > svg,
+  .tx-avatar > span:first-child {
+    width: 2.55rem;
+    height: 2.55rem;
+    border-radius: 0.75rem;
+    font-size: 1.1rem;
+  }
+
+  .tx-dir {
+    top: 1.55rem;
+    left: -0.18rem;
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+
+  .tx-dir svg {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .tx-avatar small {
+    margin-top: 0.18rem;
+    font-size: 0.6rem;
+  }
+
+  .tx-info small {
+    font-size: 0.7rem;
+  }
+
+  .tx-info p {
+    margin: 0.05rem 0;
+    font-size: 0.85rem;
+  }
+
+  .tx-info time {
+    font-size: 0.68rem;
+  }
+
+  .powered {
+    padding: 0.85rem 0 0.2rem;
+  }
+
+  .powered small {
+    font-size: 0.6rem;
+  }
+
+  .ipn-mark {
+    width: 4.6rem;
+    height: 1.7rem;
+  }
 }
+
 
