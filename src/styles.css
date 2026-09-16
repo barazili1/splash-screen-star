@@ -647,7 +647,7 @@
   display: grid;
   justify-items: center;
   gap: 0.2rem;
-  padding: 1.2rem 0 0.4rem;
+  padding: 15px 0;
 }
 
 .powered small {
@@ -906,7 +906,7 @@
   }
 
   .powered {
-    padding: 0.85rem 0 0.2rem;
+    padding: 15px 0;
   }
 
   .powered small {
