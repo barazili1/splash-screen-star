@@ -102,6 +102,7 @@ const transactions = [
 ];
 
 function HomePage() {
+  const [qrOpen, setQrOpen] = useState(false);
   return (
     <div className="home" dir="rtl" lang="ar">
       <img
