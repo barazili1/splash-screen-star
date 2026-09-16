@@ -1182,7 +1182,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-top: auto;
-  padding-bottom: 45px;
+  padding-bottom: 0;
 }
 
 .pin-key {
