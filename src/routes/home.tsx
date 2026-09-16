@@ -4,15 +4,7 @@ import {
   ArrowUpRight,
   ArrowUpLeft,
   ArrowDownRight,
-  Receipt,
-  Share2,
-  QrCode,
-  Landmark,
-  HandCoins,
-  FileSymlink,
-  Menu,
   Smartphone,
-  Home as HomeIcon,
 } from "lucide-react";
 import homeHeader from "@/assets/home-header.jpeg";
 import bankLogo from "@/assets/bank-logo.png";
@@ -22,6 +14,15 @@ import navSend from "@/assets/nav-send.png";
 import navRequest from "@/assets/nav-request.png";
 import navBills from "@/assets/nav-bills.png";
 import navMenu from "@/assets/nav-menu.png";
+import actionBalance from "@/assets/action-balance.png.asset.json";
+import actionLink from "@/assets/action-link.png.asset.json";
+import actionQr from "@/assets/action-qr.png.asset.json";
+import serviceBills from "@/assets/service-bills.png.asset.json";
+import serviceRequest from "@/assets/service-request.png.asset.json";
+import serviceSend from "@/assets/service-send.png.asset.json";
+import serviceHistory from "@/assets/service-history.png.asset.json";
+import serviceAccounts from "@/assets/service-accounts.png.asset.json";
+import serviceDonations from "@/assets/service-donations.png.asset.json";
 
 export const Route = createFileRoute("/home")({
   head: () => ({
@@ -44,12 +45,12 @@ export const Route = createFileRoute("/home")({
 });
 
 const services = [
-  { label: "ارسال نقود", Icon: ArrowUpRight },
-  { label: "طلب دفع", Icon: ArrowDownLeft },
-  { label: "دفع فواتير", Icon: Receipt },
-  { label: "التبرعات", Icon: HandCoins },
-  { label: "عرض الحسابات", Icon: Landmark },
-  { label: "المعاملات السابقة", Icon: FileSymlink },
+  { label: "ارسال نقود", image: serviceSend.url },
+  { label: "طلب دفع", image: serviceRequest.url },
+  { label: "دفع فواتير", image: serviceBills.url },
+  { label: "التبرعات", image: serviceDonations.url },
+  { label: "عرض الحسابات", image: serviceAccounts.url },
+  { label: "المعاملات السابقة", image: serviceHistory.url },
 ];
 
 const transactions = [
@@ -109,25 +110,25 @@ function HomePage() {
       <section className="home-section">
         <div className="account-card">
           <div className="account-top">
+            <img src={bankLogo} alt="البنك" loading="lazy" width={816} height={816} />
             <div className="account-id">
               <p>mohamed.othman4279@instapay</p>
               <small>
                 PREPAID <span>****6150</span>
               </small>
             </div>
-            <img src={bankLogo} alt="البنك" loading="lazy" width={816} height={816} />
           </div>
           <div className="account-actions">
             <button type="button">
-              <QrCode strokeWidth={1.8} />
+              <img src={actionQr.url} alt="" />
               <span>مشاركة QR</span>
             </button>
             <button type="button">
-              <Share2 strokeWidth={1.8} />
+              <img src={actionLink.url} alt="" />
               <span>رابط</span>
             </button>
             <button type="button">
-              <Receipt strokeWidth={1.8} />
+              <img src={actionBalance.url} alt="" />
               <span>الرصيد</span>
             </button>
           </div>
@@ -141,11 +142,9 @@ function HomePage() {
           <button type="button">المزيد</button>
         </div>
         <div className="services-grid">
-          {services.map(({ label, Icon }) => (
+          {services.map(({ label, image }) => (
             <div className="service-tile" key={label}>
-              <span className="service-icon">
-                <Icon strokeWidth={1.8} />
-              </span>
+              <img className="service-icon" src={image} alt="" />
               <p>{label}</p>
             </div>
           ))}
