@@ -1124,7 +1124,7 @@
 }
 
 .pin-body {
-  padding: 38px 45px 0;
+  padding: 32px 45px 0;
 }
 
 .pin-label {
@@ -1182,7 +1182,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-top: auto;
-  padding-bottom: 22px;
+  padding-bottom: 45px;
 }
 
 .pin-key {
