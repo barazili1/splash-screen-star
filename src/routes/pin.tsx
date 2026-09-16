@@ -86,7 +86,7 @@ function PinPage() {
         </div>
       </div>
 
-      <div className="pin-keypad">
+      <div className="pin-keypad" dir="ltr">
         {keys.map((key) => (
           <button
             type="button"
