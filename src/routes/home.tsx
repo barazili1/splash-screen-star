@@ -14,14 +14,14 @@ import {
   Smartphone,
   Home as HomeIcon,
 } from "lucide-react";
-import homeHeader from "@/assets/home-header.jpeg.asset.json";
+import homeHeader from "@/assets/home-header.jpeg";
 import bankLogo from "@/assets/bank-logo.png";
 import ipnLogo from "@/assets/ipn-logo.png";
-import navHome from "@/assets/nav-home.png.asset.json";
-import navSend from "@/assets/nav-send.png.asset.json";
-import navRequest from "@/assets/nav-request.png.asset.json";
-import navBills from "@/assets/nav-bills.png.asset.json";
-import navMenu from "@/assets/nav-menu.png.asset.json";
+import navHome from "@/assets/nav-home.png";
+import navSend from "@/assets/nav-send.png";
+import navRequest from "@/assets/nav-request.png";
+import navBills from "@/assets/nav-bills.png";
+import navMenu from "@/assets/nav-menu.png";
 
 export const Route = createFileRoute("/home")({
   head: () => ({
@@ -100,7 +100,7 @@ function HomePage() {
     <div className="home" dir="rtl" lang="ar">
       <img
         className="home-hero"
-        src={homeHeader.url}
+        src={homeHeader}
         alt="مساء الخير Mohamed — ادفع فواتيرك"
         width={1282}
         height={921}
@@ -203,20 +203,20 @@ function HomePage() {
 
       <nav className="bottom-nav" aria-label="التنقل">
         <button type="button" className="nav-item active">
-          <img src={navHome.url} alt="" />
+          <img src={navHome} alt="" />
           <span>الرئيسية</span>
         </button>
         <button type="button" className="nav-item" aria-label="ارسال نقود">
-          <img src={navSend.url} alt="" />
+          <img src={navSend} alt="" />
         </button>
         <button type="button" className="nav-item" aria-label="طلب دفع">
-          <img src={navRequest.url} alt="" />
+          <img src={navRequest} alt="" />
         </button>
         <button type="button" className="nav-item" aria-label="الفواتير">
-          <img src={navBills.url} alt="" />
+          <img src={navBills} alt="" />
         </button>
         <button type="button" className="nav-item" aria-label="القائمة">
-          <img src={navMenu.url} alt="" />
+          <img src={navMenu} alt="" />
         </button>
       </nav>
     </div>

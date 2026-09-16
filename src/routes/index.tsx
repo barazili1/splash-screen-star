@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import backgroundAsset from "@/assets/instapay-background.jpeg.asset.json";
+import backgroundAsset from "@/assets/instapay-background.jpeg";
 import instapayLogo from "@/assets/instapay-logo.png";
 import ipnLogo from "@/assets/ipn-logo.png";
 import chevrons from "@/assets/chevrons.png";
@@ -84,7 +84,7 @@ function Index() {
     <main
       className="splash"
       aria-label="Instapay splash screen"
-      style={{ backgroundImage: `url(${backgroundAsset.url})` }}
+      style={{ backgroundImage: `url(${backgroundAsset})` }}
     >
       <section className="brand-lockup">
         <p lang="ar" dir="rtl">أهلاً بك في</p>
