@@ -920,3 +920,87 @@
 }
 
 
+
+/* QR share dialog */
+.qr-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  background: oklch(0 0 0 / 0.45);
+}
+
+.qr-card {
+  width: 100%;
+  max-width: 390px;
+  padding: 29px 25px 25px;
+  border-radius: 22px;
+  background: oklch(1 0 0);
+  text-align: center;
+}
+
+.qr-image {
+  display: block;
+  width: 297px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.qr-handle {
+  margin: 18px 0 20px;
+  color: oklch(0.45 0.02 280);
+  font-size: 17px;
+  letter-spacing: 0.01em;
+}
+
+.qr-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.qr-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 38px;
+  border: 1.5px solid var(--home-orange);
+  border-radius: 9px;
+  background: none;
+  color: var(--home-orange);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.qr-actions button img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.qr-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 59px;
+  height: 59px;
+  margin-top: 29px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: oklch(1 0 0);
+  color: oklch(0.55 0.01 280);
+  cursor: pointer;
+}
+
+.qr-close svg {
+  width: 26px;
+  height: 26px;
+}

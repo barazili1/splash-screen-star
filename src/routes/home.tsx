@@ -1,11 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import {
   ArrowDownLeft,
   ArrowUpRight,
   ArrowUpLeft,
   ArrowDownRight,
   Smartphone,
+  X,
 } from "lucide-react";
+import qrCode from "@/assets/qr-code.png.asset.json";
+import btnQr from "@/assets/btn-qr.png.asset.json";
+import btnShare from "@/assets/btn-share.png.asset.json";
 import homeHeader from "@/assets/home-header.jpeg";
 import bankLogo from "@/assets/bank-reference.png.asset.json";
 import ipnLogo from "@/assets/ipn-logo.png";
@@ -97,6 +102,7 @@ const transactions = [
 ];
 
 function HomePage() {
+  const [qrOpen, setQrOpen] = useState(false);
   return (
     <div className="home" dir="rtl" lang="ar">
       <img
@@ -119,7 +125,7 @@ function HomePage() {
             </div>
           </div>
           <div className="account-actions">
-            <button type="button">
+            <button type="button" onClick={() => setQrOpen(true)}>
               <img src={actionQr.url} alt="" />
               <span>مشاركة QR</span>
             </button>
@@ -218,6 +224,35 @@ function HomePage() {
           <img src={navMenu} alt="" />
         </button>
       </nav>
+
+      {qrOpen && (
+        <div className="qr-overlay" role="dialog" aria-modal="true" aria-label="مشاركة QR">
+          <div className="qr-card">
+            <img className="qr-image" src={qrCode.url} alt="رمز QR" />
+            <p className="qr-handle" dir="ltr">
+              mohamed.othman4279@instapay
+            </p>
+            <div className="qr-actions">
+              <button type="button">
+                <img src={btnQr.url} alt="" />
+                <span>مشاركة QR</span>
+              </button>
+              <button type="button">
+                <img src={btnShare.url} alt="" />
+                <span>مشاركة الرابط</span>
+              </button>
+            </div>
+          </div>
+          <button
+            type="button"
+            className="qr-close"
+            aria-label="إغلاق"
+            onClick={() => setQrOpen(false)}
+          >
+            <X strokeWidth={2} />
+          </button>
+        </div>
+      )}
     </div>
   );
 }
