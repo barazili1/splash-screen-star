@@ -1,5 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import { ProgressMark } from "@/components/progress-mark";
 import {
   ArrowDownLeft,
   ArrowUpRight,
