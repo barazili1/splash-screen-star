@@ -707,3 +707,132 @@
   font-weight: 600;
 }
 
+/* Reference-accurate mobile proportions */
+@media (max-width: 520px) {
+  .home {
+    padding-bottom: 4.25rem;
+  }
+
+  .home-section {
+    padding-inline: 1.4375rem;
+  }
+
+  .home > .home-section:first-of-type {
+    padding-top: 0.18rem;
+  }
+
+  .account-card {
+    min-height: 8.125rem;
+    padding: 0.72rem 0.82rem 0.3rem;
+    border-radius: 0.9rem;
+    box-shadow: none;
+  }
+
+  .account-top {
+    gap: 0.45rem;
+  }
+
+  .account-id {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .account-id p {
+    direction: ltr;
+    font-size: 0.91rem;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .account-id small {
+    margin-top: 0.18rem;
+    font-size: 0.67rem;
+  }
+
+  .account-top img {
+    width: 2.95rem;
+    height: 2.95rem;
+    border-radius: 0.55rem;
+  }
+
+  .account-actions {
+    margin-top: 0.55rem;
+  }
+
+  .account-actions button {
+    gap: 0.25rem;
+    min-width: 0;
+    padding: 0.42rem 0;
+    font-size: 0.75rem;
+  }
+
+  .account-actions button img {
+    width: 1.55rem;
+    height: 1.55rem;
+    object-fit: contain;
+  }
+
+  .dot {
+    width: 0.42rem;
+    height: 0.42rem;
+    margin-top: 0.43rem;
+  }
+
+  .home > .home-section:nth-of-type(2) {
+    padding-top: 1.25rem;
+  }
+
+  .section-head {
+    margin-bottom: 0.62rem;
+  }
+
+  .section-head h2,
+  .section-head button {
+    font-size: 0.84rem;
+    font-weight: 400;
+  }
+
+  .services-grid {
+    gap: 0.68rem;
+  }
+
+  .service-tile {
+    height: 7.94rem;
+    align-content: start;
+    gap: 0.58rem;
+    padding: 0.72rem 0.25rem 0.45rem;
+    border-radius: 0.9rem;
+    box-shadow: none;
+  }
+
+  .service-icon {
+    display: block;
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 0.7rem;
+    object-fit: cover;
+  }
+
+  .service-tile p {
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+
+  .bottom-nav {
+    height: 4.25rem;
+    padding: 0.35rem 0.55rem max(0.28rem, env(safe-area-inset-bottom));
+    border-radius: 1.35rem 1.35rem 0 0;
+  }
+
+  .nav-item {
+    gap: 0.08rem;
+    font-size: 0.62rem;
+  }
+
+  .nav-item svg,
+  .nav-item img {
+    width: 1.42rem;
+    height: 1.42rem;
+  }
+}
+
