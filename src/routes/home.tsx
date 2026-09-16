@@ -125,7 +125,7 @@ function HomePage() {
             </div>
           </div>
           <div className="account-actions">
-            <button type="button">
+            <button type="button" onClick={() => setQrOpen(true)}>
               <img src={actionQr.url} alt="" />
               <span>مشاركة QR</span>
             </button>
