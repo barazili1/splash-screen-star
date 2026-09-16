@@ -1,7 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { ChevronLeft, ChevronDown, Eye } from "lucide-react";
-import ipnLogo from "@/assets/ipn-logo.png";
+import ipnLogo from "@/assets/ipn-color.png.asset.json";
 
 export const Route = createFileRoute("/pin")({
   head: () => ({
@@ -41,7 +41,7 @@ function PinPage() {
   return (
     <div className="pin" dir="rtl" lang="ar">
       <header className="pin-header">
-        <img className="pin-ipn" src={ipnLogo} alt="IPN" />
+        <img className="pin-ipn" src={ipnLogo.url} alt="IPN" />
         <button type="button" className="pin-bank" onClick={() => navigate({ to: "/home" })}>
           <span dir="ltr">National Bank of Egypt</span>
           <ChevronLeft strokeWidth={2.4} />
