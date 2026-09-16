@@ -104,6 +104,14 @@ const transactions = [
 
 function HomePage() {
   const [qrOpen, setQrOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!loading) return;
+    const t = window.setTimeout(() => navigate({ to: "/pin" }), 1600);
+    return () => window.clearTimeout(t);
+  }, [loading, navigate]);
   return (
     <div className="home" dir="rtl" lang="ar">
       <img
@@ -134,7 +142,7 @@ function HomePage() {
               <img src={actionLink.url} alt="" />
               <span>رابط</span>
             </button>
-            <button type="button">
+            <button type="button" onClick={() => setLoading(true)}>
               <img src={actionBalance.url} alt="" />
               <span>الرصيد</span>
             </button>
@@ -225,6 +233,12 @@ function HomePage() {
           <img src={navMenu} alt="" />
         </button>
       </nav>
+
+      {loading && (
+        <div className="loading-overlay" role="status" aria-label="جارٍ التحميل">
+          <ProgressMark size={56} />
+        </div>
+      )}
 
       {qrOpen && (
         <div className="qr-overlay" role="dialog" aria-modal="true" aria-label="مشاركة QR">
